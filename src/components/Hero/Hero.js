@@ -9,29 +9,30 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
-        </h1>
-        <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button>
+        <h3>
+          Nathan Ribeiro
+        </h3>
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
           align-items: center;
-          background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
+          background: #000;
+        
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 60vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+
+          h3 {
+            color: ${theme.hero.h3.color};
+          }
         }
 
         h1 {
@@ -99,10 +100,7 @@ const Hero = props => {
         }
 
         @from-width tablet {
-          .hero {
-            background-image: url(${backgrounds.tablet});
-          }
-
+        
           h1 {
             max-width: 90%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
@@ -114,10 +112,7 @@ const Hero = props => {
         }
 
         @from-width desktop {
-          .hero {
-            background-image: url(${backgrounds.desktop});
-          }
-
+         
           h1 {
             max-width: 80%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
