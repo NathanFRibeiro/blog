@@ -136,10 +136,18 @@ hero:
     size: *font-size-xxl
     color: *color-white
     lineHeight: *font-line-height-xs
+    family: *font-family-target
+  h2:
+    size: *font-size-xl
+    color: *color-white
+    lineHeight: *font-line-height-xs
+    family: *font-family-target
+    weight: 400
   h3:
     size: *font-size-xxl
     color: *color-white
     lineHeight: *font-line-height-xs
+    family: *font-family-target
   background: 'linear-gradient(0deg, #E0306E, #6438B5)'
 blog:
   h1:

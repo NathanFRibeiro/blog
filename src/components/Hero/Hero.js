@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { FaArrowDown } from "react-icons/fa/";
+import avatar from "../../images/jpg/avatar.jpg";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
@@ -9,9 +10,12 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h3>
+        <div className="logo">
+          <img src={avatar} />
+        </div>
+        <h2>
           Nathan Ribeiro
-        </h3>
+        </h2>
       </section>
 
       {/* --- STYLES --- */}
@@ -25,7 +29,7 @@ const Hero = props => {
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 60vh;
+          min-height: 50vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
@@ -35,12 +39,34 @@ const Hero = props => {
           }
         }
 
-        h1 {
+        .logo {
+          border-radius: 50%;
+          border: 1px solid black;
+          display: inline-block;
+          height: 100px;
+          margin-bottom: 15px;
+          overflow: hidden;
+          width: 100px;
+          transition: all 0.5s;
+
+          .homepage & {
+            height: 60px;
+            width: 60px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        h2 {
           text-align: center;
-          font-size: ${theme.hero.h1.size};
+          font-size: ${theme.hero.h2.size};
+          font-family: ${theme.hero.h2.family};
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
+          font-weight: 400;
           text-remove-gap: both 0 "Open Sans";
 
           :global(strong) {

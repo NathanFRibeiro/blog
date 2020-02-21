@@ -204,9 +204,10 @@ class Header extends React.Component {
                 }
                 h2 {
                   color: ${theme.color.neutral.gray.d};
-                }
-                .logoType{
-                  opacity:0 !important;
+                } 
+                
+                .logo, .type {
+                  display: none !important;
                 }
               }
             }
