@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { FaArrowDown } from "react-icons/fa/";
+import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa/";
 import avatar from "../../images/jpg/avatar.jpg";
+import background from "../../images/jpg/background.jpg";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
@@ -13,17 +14,42 @@ const Hero = props => {
         <div className="logo">
           <img src={avatar} />
         </div>
-        <h2>
-          Nathan Ribeiro
-        </h2>
+        <h2>Nathan Ribeiro</h2>
+        <h3>Web Development</h3>
+        <div className="list-icon">
+          <a className="icon" href="#">
+            <FaGithub size="20"></FaGithub>
+          </a>
+          <a className="icon" href="#">
+            <FaTwitter size="20"></FaTwitter>
+          </a>
+          <a className="icon" href="#">
+            <FaLinkedin size="20"></FaLinkedin>
+          </a>
+        </div>
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
+        .list-icon {
+          margin-top: 20px;
+          width: 90px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .icon {
+          color: #999;
+        }
+
+        .icon:hover {
+          color: white !important;
+        }
+
         .hero {
           align-items: center;
-          background: #000;
-        
+          background-image: url(${background});
+
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
@@ -40,8 +66,7 @@ const Hero = props => {
         }
 
         .logo {
-          border-radius: 50%;
-          border: 1px solid black;
+          border: 0;
           display: inline-block;
           height: 100px;
           margin-bottom: 15px;
@@ -50,12 +75,14 @@ const Hero = props => {
           transition: all 0.5s;
 
           .homepage & {
-            height: 60px;
-            width: 60px;
+            height: 100px;
+            width: 100px;
           }
 
           img {
             width: 100%;
+            height: 100%;
+            border-radius: 50%;
           }
         }
 
@@ -63,10 +90,37 @@ const Hero = props => {
           text-align: center;
           font-size: ${theme.hero.h2.size};
           font-family: ${theme.hero.h2.family};
-          margin: ${theme.space.stack.l};
+          margin: ${theme.space.stack.s};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
           font-weight: 400;
+          text-remove-gap: both 0 "Open Sans";
+
+          :global(strong) {
+            position: relative;
+
+            &::after,
+            &::before {
+              content: "›";
+              color: ${theme.text.color.attention};
+              margin: 0 ${theme.space.xs} 0 0;
+              text-shadow: 0 0 ${theme.space.s} ${theme.color.neutral.gray.k};
+            }
+            &::after {
+              content: "‹";
+              margin: 0 0 0 ${theme.space.xs};
+            }
+          }
+        }
+
+        h3 {
+          text-align: center;
+          font-size: ${theme.hero.h3.size};
+          font-family: ${theme.hero.h3.family};
+          color: ${theme.hero.h1.color};
+          line-height: ${theme.hero.h1.lineHeight};
+          font-weight: 300;
+          opacity: 0.85;
           text-remove-gap: both 0 "Open Sans";
 
           :global(strong) {
@@ -126,7 +180,6 @@ const Hero = props => {
         }
 
         @from-width tablet {
-        
           h1 {
             max-width: 90%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
@@ -138,7 +191,6 @@ const Hero = props => {
         }
 
         @from-width desktop {
-         
           h1 {
             max-width: 80%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};

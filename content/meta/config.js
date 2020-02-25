@@ -13,7 +13,7 @@ module.exports = {
 
   /* info */
   headerTitle: "Nathan Ribeiro",
-  headerSubTitle: "presents another one GatsbyJS starter",
+  headerSubTitle: "Web Development",
 
   /* manifest.json */
   manifestName: "Nathan Ribeiro - Web Developer",
@@ -34,6 +34,7 @@ module.exports = {
   authorSocialLinks: [
     { name: "github", url: "https://github.com/nathanfribeiro" },
     { name: "twitter", url: "https://twitter.com/nathanfribeiro" },
+    { name: "linkedin", url: "https://linkedin.com/in/nathanfribeiro" },
     { name: "facebook", url: "#" }
   ]
 };

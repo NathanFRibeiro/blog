@@ -38,7 +38,10 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5} alt={config.siteTitle} />
+              <img
+                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                alt={config.siteTitle}
+              />
             </div>
             <div className="type">
               <h1>{config.headerTitle}</h1>
@@ -152,9 +155,10 @@ class Header extends React.Component {
           }
 
           @below desktop {
-            .header.homepage {
-              .logo {
-                border: none;
+            .homepage {
+              .logo,
+              .type {
+                display: none;
               }
 
               :global(a.logoType),
@@ -191,10 +195,6 @@ class Header extends React.Component {
                 h1 {
                   margin: ${theme.space.stack.xxs};
                 }
-
-                h2 {
-                  display: none;
-                }
               }
 
               &.homepage:not(.fixed) {
@@ -204,9 +204,10 @@ class Header extends React.Component {
                 }
                 h2 {
                   color: ${theme.color.neutral.gray.d};
-                } 
-                
-                .logo, .type {
+                }
+
+                .logo,
+                .type {
                   display: none !important;
                 }
               }
