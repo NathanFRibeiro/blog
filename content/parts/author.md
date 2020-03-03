@@ -2,4 +2,4 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus.
+**Nathan Ribeiro** Desenvolvedor web full-stack desde 2016, entusiasta em conhecer novas tecnologias e propagar conhecimento. Cristão, apaixonado pela Isa, carioca e flamenguista.

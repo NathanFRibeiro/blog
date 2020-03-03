@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "Nathan Ribeiro", // <title>
   shortSiteTitle: "Nathan Ribeiro - Web Developer", // <title> ending for posts and pages
   siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteUrl: "https://nathanribeiro.netlify.com/",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "pt-br",
