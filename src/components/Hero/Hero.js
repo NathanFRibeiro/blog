@@ -12,7 +12,7 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <div className="logo">
-          <img src={avatar} />
+         
         </div>
         <h2>Nathan Ribeiro</h2>
         <h3>Web Development</h3>
