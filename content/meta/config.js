@@ -32,8 +32,8 @@ module.exports = {
 
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/nathanfribeiro" },
-    { name: "twitter", url: "https://twitter.com/nathanfribeiro" },
+    { name: "github", url: "" },
+    { name: "twitter", url: "" },
     { name: "linkedin", url: "https://linkedin.com/in/nathanfribeiro" },
     { name: "facebook", url: "#" }
   ]
